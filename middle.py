@@ -11,7 +11,6 @@ def handle_clinet(client_socket, server_socket):
             print("Server received", server_message)
             client_socket.send("Echo => " + server_message)
         except EOFError:
-            print("Exception: EOF Error")
             break
     print("Connection closed")
     client_socket.close()
