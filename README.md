@@ -11,5 +11,5 @@ Remember to change the IP in `client_config.example.py` to the IP of your public
 The easiest way to realize NAT traversal is to use the `ssh -R` command. But that is not stable enough. You could use `Auto SSH` for help. The command is shown below.
 
 ```shell
-autossh -M 5842 -f -R 23104:localhost:8976 -NT -g <username>@<address>
+autossh -M <watch_port> -f -R <public_port>:localhost:<inner_port> -NT -g <username>@<address>
 ```
